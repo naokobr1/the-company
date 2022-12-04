@@ -20,7 +20,7 @@ class User extends Database{
         $sql = "SELECT `id`, username, `password` FROM users WHERE username = '$username'";
 
         if($result = $this->conn->query($sql)){
-            //check if the username exists in the database
+            
             if($result->num_rows ==1){
                 // check and compare the password from the UI to the DATABSDE
                 $user_details = $result->fetch_assoc();
